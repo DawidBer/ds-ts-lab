@@ -29,6 +29,11 @@ interface Colleague {
     },
 };
 
+interface ColleagueHistory {
+    current: Colleague[],
+    former: Colleague[]
+};
+
 const colleague1 = {
     name: "Steven Spielberg",
     department: "Engineering",
@@ -56,9 +61,9 @@ const colleague3 = {
     },
 };
 
-const colleagues = {
-    current: [colleague1,colleague2,colleague3],
-    former:[],
+export const colleagues: ColleagueHistory = {
+    current: [colleague1,colleague2, colleague3],
+    former: []
 };
 
 console.log(colleagues.current[0]);
