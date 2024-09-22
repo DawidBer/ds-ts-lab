@@ -74,3 +74,20 @@ function findFriends(friends: Friend[], filterer: (c1: Friend) => boolean): stri
 
 //console.log(findFriends(friends, (friend) => friend.name.startsWith('Mi')));
 //console.log(findFriends(friends, (friend) => friend.age < 23));
+
+function addInterest(friends: Friend, newInterest: string) : string[]
+{
+
+  if(!friends.interests)
+  {
+    friends.interests = [];
+  }
+
+  if(!friends.interests?.includes(newInterest)) 
+  {
+    friends.interests?.push(newInterest);
+  }
+  return friends.interests;
+}
+
+console.log(addInterest(friends[1], 'Politics'))
